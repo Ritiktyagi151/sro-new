@@ -27,7 +27,7 @@ const slides = [
     {
     title: "",
     description: "",
-    background: "/srobanners/roller-chain-banner.png",
+    background: "/srobanners/roller-chains-banner.png",
     showContent: false, // is slide pe text/buttons hide rahenge
   },
 ];
