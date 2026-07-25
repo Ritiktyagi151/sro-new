@@ -1,0 +1,423 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "bearing-maintenance-tips",
+      "title": "5 Essential Bearing Maintenance Tips",
+      "excerpt": "Learn how to properly maintain your bearings to extend their lifespan.",
+      "date": "2023-10-15",
+      "image": "https://images.unsplash.com/photo-1503507739298-dce173d09653?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmVhcmluZyUyMG1haW50ZW5hbmNlJTIwdGlwc3xlbnwwfHwwfHx8MA%3D%3D",
+      "category": "Maintenance",
+      "readTime": "4 min read",
+      "content": "Our advanced bearing maintenance guide provides critical insights on lubrication intervals, contaminant protection, handling tools, alignment practices, and vibration checks to prevent early failure."
+    },
+    {
+      "id": 2,
+      "slug": "lubrication-best-practices",
+      "title": "How to Choose the Right Bearing",
+      "excerpt": "Guide to selecting bearings based on load and speed requirements.",
+      "date": "2023-09-28",
+      "image": "https://images.unsplash.com/photo-1709294324061-fc40251bb002?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHVicmljYXRpb24lMjBiZXN0JTIwcHJhY3RpY2VzfGVufDB8fHww",
+      "category": "Guide",
+      "readTime": "6 min read",
+      "content": "Choosing the correct bearing requires a detailed analysis of radial and axial load vectors, rotational speeds, environmental temperatures, seals, and bearing clearance codes."
+    },
+    {
+      "id": 3,
+      "slug": "installation-tips-bearings",
+      "title": "Top Installation Tips for Long-Lasting Bearings",
+      "excerpt": "Discover the best practices for installing bearings to maximize their performance.",
+      "date": "2023-12-05",
+      "image": "https://images.unsplash.com/photo-1656597631995-9fa0e1072279?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGluc3RhbGxhdGlvbiUyMHRpcHMlMjBiZWFyaW5nc3xlbnwwfHwwfHx8MA%3D%3D",
+      "category": "Installation",
+      "readTime": "5 min read",
+      "content": "Improper installation causes up to 16% of premature bearing failures. Use induction heaters instead of hammers, align shafts precisely, and handle with clean gloves."
+    },
+    {
+      "id": 4,
+      "slug": "bearing-inspection-guide",
+      "title": "A Complete Guide to Bearing Inspection",
+      "excerpt": "Step-by-step guide for inspecting bearings for wear, damage, and performance.",
+      "date": "2024-01-12",
+      "image": "https://images.unsplash.com/photo-1615746363486-92cd8c5e0a90?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVhcmluZyUyMGluc3BlY3Rpb24lMjBndWlkZXxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "Inspection",
+      "readTime": "4 min read",
+      "content": "Regular inspections help catch issues early. Learn to identify spalling, electrical erosion fluting, cage fatigue, and lubrication discolouration."
+    },
+    {
+      "id": 5,
+      "slug": "bearing-replacement-checklist",
+      "title": "Bearing Replacement Checklist You Should Follow",
+      "excerpt": "Key signs and checklist to help you know when it's time to replace a bearing.",
+      "date": "2024-02-25",
+      "image": "https://images.unsplash.com/photo-1567093322503-341d262ad8f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJlYXJpbmclMjByZXBsYWNlbWVudCUyMGNoZWNrbGlzdHxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "Maintenance",
+      "readTime": "4 min read",
+      "content": "When temperature spikes or noise level increases, use this structured checklist before replacing bearings to determine root cause failures and document wear pattern layouts."
+    },
+    {
+      "id": 6,
+      "slug": "bearing-performance-optimization",
+      "title": "How to Optimize Bearing Performance",
+      "excerpt": "Tips and techniques to enhance bearing efficiency and extend operational life.",
+      "date": "2024-03-15",
+      "image": "https://images.unsplash.com/photo-1715079005638-c37bfd236c1c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJlYXJpbmclMjBwZXJmb3JtYW5jZSUyMG9wdGltaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "Performance",
+      "readTime": "5 min read",
+      "content": "Optimizing bearings involves matching precision tolerances, upgrading cage designs, selecting low-friction synthetic greases, and balancing surrounding dynamic shafts."
+    },
+    {
+      "id": 7,
+      "slug": "types-of-industrial-bearings",
+      "title": "Understanding Different Types of Industrial Bearings",
+      "excerpt": "Overview of various industrial bearing types and their key applications.",
+      "date": "2024-04-10",
+      "image": "https://images.unsplash.com/photo-1658248165127-f880b5a74e98?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dHlwZXMlMjBvZiUyMGluZHVzdHJpYWwlMjBiZWFyaW5ncyUyMnxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "Technical Insights",
+      "readTime": "5 min read",
+      "content": "Explore deep groove ball bearings, tapered roller bearings, spherical roller bearings, cylindrical roller bearings, and thrust bearings, detailing their optimal speed and load parameters."
+    }
+  ],
+  "products": [
+    {
+      "slug": "spherical-roller-bearings",
+      "name": "Spherical Roller Bearings",
+      "description": "Designed for heavy radial and axial loads in both directions.",
+      "image": "https://media.istockphoto.com/id/521230407/photo/group-of-bearings-isolated.jpg?s=612x612&w=0&k=20&c=L5TC6rTNrEeBvJdCy0gR9GolxTmYUhqhwh03XVawzRo="
+    },
+    {
+      "slug": "taper-roller-bearings",
+      "name": "Taper Roller Bearings",
+      "description": "Perfect for combined axial and radial loads.",
+      "image": "https://media.istockphoto.com/id/1365448155/photo/metal-silver-ball-bearing-with-balls-on-white-isolated-background-industrial-bearing-set-ball.jpg?s=612x612&w=0&k=20&c=bazmN3MtIP9o5knSQWLiFMOxy2XphmMG8qSSZ7uVVf8="
+    },
+    {
+      "slug": "thrust-bearings",
+      "name": "Thrust Bearings",
+      "description": "Handles axial loads in high-speed applications.",
+      "image": "https://media.istockphoto.com/id/537377996/photo/bearing.jpg?s=612x612&w=0&k=20&c=MJeT8jNpEtLkKZX0rCiEw6-3jHXSbFkO_gkFXMKq1ps="
+    },
+    {
+      "slug": "multi-row-bearings",
+      "name": "Multi Row Bearings",
+      "description": "Suitable for large radial loads and high-speed rotation.",
+      "image": "https://media.istockphoto.com/id/696640668/photo/3d-rendering-of-tapered-roller-bearings.jpg?s=612x612&w=0&k=20&c=VVGBMzlgasGoNf7BIHMK3IN-tBB-kFnv94LNXaH8ooY="
+    },
+    {
+      "slug": "pillow-block-bearing",
+      "name": "Pillow Block Bearing",
+      "description": "Used in mounted bearing units for industrial machines.",
+      "image": "https://media.istockphoto.com/id/960982298/photo/support-bearing-assembly.jpg?s=612x612&w=0&k=20&c=Oy75zBQpWgk36rP70r9Hv1TdB9Wrjv74noM_fwpT49o="
+    },
+    {
+      "slug": "plummer-blocks",
+      "name": "Plummer Blocks",
+      "description": "Reliable and efficient housing for rotary shafts.",
+      "image": "https://media.istockphoto.com/id/1400522671/photo/bearing-unit.jpg?s=612x612&w=0&k=20&c=gioMYKovMFDvK7Hm_dxtI-9m6pKbAtHCln-wFdn3WPE="
+    },
+    {
+      "slug": "roller-chains",
+      "name": "Roller Chains",
+      "description": "High-performance transmission chain for power systems.",
+      "image": "https://media.istockphoto.com/id/636828986/photo/timing-mechanism-on-a-white-background.jpg?s=612x612&w=0&k=20&c=NRdgODUjCj07dR7ijdrrtbMWq5BOWlplGgvlmXBvIkA="
+    }
+  ],
+  "services": [
+    {
+      "title": "Condition Monitoring Solutions",
+      "description": "Predictive maintenance technologies to maximize equipment uptime.",
+      "fullDescription": [
+        "Our advanced condition monitoring systems provide real-time insights into your equipment health, enabling predictive maintenance strategies that reduce downtime by up to 50%. Using a combination of vibration analysis, thermography, and oil analysis, we detect potential failures before they occur.",
+        "Key features include:",
+        "- Wireless sensor networks for comprehensive coverage",
+        "- AI-powered analytics for failure prediction",
+        "- Customizable alert thresholds",
+        "- Integration with existing CMMS systems",
+        "Typical applications:",
+        "- Rotating machinery (pumps, motors, compressors)",
+        "- Gearboxes and bearings",
+        "- Process equipment"
+      ],
+      "benefits": [
+        "40-60% reduction in unplanned downtime",
+        "25-40% longer equipment lifespan",
+        "Reduced maintenance costs by 20-35%"
+      ],
+      "icon": "📊",
+      "image": "https://picsum.photos/600/400?random=1",
+      "caseStudy": "A major refinery reduced maintenance costs by $2.3M annually after implementing our monitoring solution across their critical rotating assets."
+    },
+    {
+      "title": "Oil Reconditioning",
+      "description": "Extend oil life indefinitely with our patented Double Separation Technology.",
+      "fullDescription": [
+        "Our RecondOil Box system revolutionizes lubrication management by continuously cleaning and restoring oil to like-new condition. The patented Double Separation Technology removes both particulate contamination and dissolved impurities that conventional filtration can't address.",
+        "System capabilities:",
+        "- Processes up to 100 liters per minute",
+        "- Removes particles down to 1 micron",
+        "- Reduces water content to <100 ppm",
+        "- Maintains optimal additive package",
+        "Implementation options:",
+        "- Skid-mounted systems for fixed installations",
+        "- Mobile units for temporary applications",
+        "- Integrated solutions for OEM equipment"
+      ],
+      "benefits": [
+        "90% reduction in oil consumption",
+        "60-80% lower waste oil disposal costs",
+        "Extended component life by 2-3x"
+      ],
+      "icon": "🔄",
+      "image": "https://picsum.photos/600/400?random=2",
+      "caseStudy": "A steel mill achieved 97% oil reuse rate and eliminated $450,000 in annual oil purchases while reducing bearing failures by 65."
+    },
+    {
+      "title": "Rotating Equipment Performance",
+      "description": "Optimize your critical machinery for peak efficiency and reliability.",
+      "fullDescription": [
+        "Our comprehensive rotating equipment performance program combines precision maintenance practices with advanced monitoring to deliver guaranteed results. We analyze your entire system from bearings to alignment, implementing best practices that transform your maintenance operations.",
+        "Service components:",
+        "- Laser alignment and dynamic balancing",
+        "- Lubrication program optimization",
+        "- Vibration analysis and correction",
+        "- Bearing installation training",
+        "- Root cause failure analysis",
+        "Performance guarantees:",
+        "- 15-30% energy reduction",
+        "- 40% longer MTBF (Mean Time Between Failures)",
+        "- 25% lower maintenance costs"
+      ],
+      "benefits": [
+        "Predictable maintenance budgets",
+        "Improved equipment availability",
+        "Reduced energy consumption"
+      ],
+      "icon": "⚙️",
+      "image": "https://picsum.photos/600/400?random=3",
+      "caseStudy": "A power plant increased pump reliability by 300% and reduced vibration-related failures to zero after implementing our performance program."
+    },
+    {
+      "title": "Application Engineering",
+      "description": "Custom solutions tailored to your exact operational requirements.",
+      "fullDescription": [
+        "Our application engineering team develops bespoke solutions for your most challenging equipment problems. We start with a thorough site assessment to understand your specific operating conditions, then design solutions that address root causes rather than symptoms.",
+        "Engineering services include:",
+        "- Bearing arrangement redesign",
+        "- Lubrication system upgrades",
+        "- Material selection consulting",
+        "- Failure mode analysis",
+        "- Life cycle cost modeling",
+        "Specialized solutions for:",
+        "- High-temperature applications",
+        "- Corrosive environments",
+        "- Heavy shock loading",
+        "- Extreme contamination"
+      ],
+      "benefits": [
+        "Equipment lifespan extended by 2-5x",
+        "Elimination of chronic failure points",
+        "Optimized total cost of ownership"
+      ],
+      "icon": "🛠️",
+      "image": "https://picsum.photos/600/400?random=4",
+      "caseStudy": "For a mining client, we redesigned a problematic conveyor idler arrangement that was failing every 3 months, extending service life to over 24 months."
+    },
+    {
+      "title": "Asset Management",
+      "description": "Transform your maintenance operations with data-driven strategies.",
+      "fullDescription": [
+        "Our asset management program elevates your maintenance practices to world-class standards through systematic implementation of reliability-centered maintenance (RCM) principles. We help you transition from reactive to proactive maintenance with measurable results.",
+        "Program components:",
+        "- Criticality analysis and equipment ranking",
+        "- Failure modes and effects analysis (FMEA)",
+        "- Maintenance strategy optimization",
+        "- Spare parts rationalization",
+        "- Key performance indicators (KPIs)",
+        "- Continuous improvement processes",
+        "Implementation approach:",
+        "- Assessment and benchmarking",
+        "- Roadmap development",
+        "- Pilot program execution",
+        "- Full-scale rollout"
+      ],
+      "benefits": [
+        "20-40% reduction in maintenance costs",
+        "15-25% improvement in equipment availability",
+        "Standardized best practices across sites"
+      ],
+      "icon": "📈",
+      "image": "https://picsum.photos/600/400?random=5",
+      "caseStudy": "A manufacturing client achieved $1.8M in annual maintenance cost savings and improved overall equipment effectiveness (OEE) by 18% within the first year."
+    },
+    {
+      "title": "Remanufacturing",
+      "description": "Sustainable component renewal with performance enhancements.",
+      "fullDescription": [
+        "Our certified remanufacturing process restores worn components to original specifications while incorporating design improvements that address known failure modes. Unlike simple repairs, our process includes complete disassembly, precision machining, upgraded materials, and rigorous testing.",
+        "Remanufacturing process:",
+        "- Complete disassembly and cleaning",
+        "- Dimensional inspection and analysis",
+        "- Precision machining of worn surfaces",
+        "- Material upgrades where applicable",
+        "- Assembly with premium components",
+        "- Comprehensive performance testing",
+        "Available for:",
+        "- Bearings and bearing housings",
+        "- Gearboxes",
+        "- Hydraulic components",
+        "- Pump and compressor parts"
+      ],
+      "benefits": [
+        "40-60% cost savings vs. new components",
+        "Improved performance over original design",
+        "Reduced environmental impact"
+      ],
+      "icon": "♻️",
+      "image": "https://picsum.photos/600/400?random=6",
+      "caseStudy": "A paper mill saved $320,000 annually by remanufacturing large dryer section bearings instead of replacing them, with no reduction in service life."
+    }
+  ],
+  "industries": [
+    {
+      "name": "Steel Industry",
+      "icon": "🔥",
+      "image": "https://t3.ftcdn.net/jpg/09/33/54/80/240_F_933548061_ILWuqxGjT7AscCB6eSthlsqJyHHueNg6.jpg",
+      "description": "High-temperature resistant bearings for rolling mills and continuous casters",
+      "features": [
+        "Withstands up to 300°C",
+        "Heavy load capacity",
+        "Scale-proof sealing",
+        "Extended lubrication intervals"
+      ]
+    },
+    {
+      "name": "Paper Industry",
+      "icon": "📜",
+      "image": "https://t4.ftcdn.net/jpg/08/90/04/79/240_F_890047910_MXbWg61YAaepNgfYH4me1xW9Smazi65R.jpg",
+      "description": "Corrosion-resistant bearings for humid paper machine environments",
+      "features": [
+        "Stainless steel options",
+        "High-speed capability",
+        "Moisture-proof design",
+        "Reduced maintenance"
+      ]
+    },
+    {
+      "name": "Cement Industry",
+      "icon": "🏗️",
+      "image": "https://t3.ftcdn.net/jpg/06/26/84/26/240_F_626842687_wrWPzxc3VJxt9Y9QODW3PtM3V6uKMN1G.jpg",
+      "description": "Dust-resistant bearings for crushers and kilns",
+      "features": [
+        "Abrasion-resistant materials",
+        "Vibration damping",
+        "Extended lubrication",
+        "Heavy-duty construction"
+      ]
+    },
+    {
+      "name": "Mining & Crushers",
+      "icon": "⛏️",
+      "image": "https://t4.ftcdn.net/jpg/14/41/72/09/240_F_1441720920_mV04OJcA2sFFUKYLNxUJdDdwcznLojrE.jpg",
+      "description": "Ultra-durable bearings for extreme shock loads",
+      "features": [
+        "Shock-load resistant",
+        "Reinforced construction",
+        "Contamination-proof",
+        "Extended service life"
+      ]
+    }
+  ],
+  "gallery": {
+    "photos": [
+      {
+        "id": 1,
+        "title": "Precision Bearings",
+        "description": "High-precision bearings for industrial applications",
+        "img": "https://t4.ftcdn.net/jpg/02/57/85/97/240_F_257859760_nK3BTo0WwjDRD2XWstjyz6KQacMhxXaa.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Industrial Solutions",
+        "description": "Custom solutions for heavy machinery",
+        "img": "https://t4.ftcdn.net/jpg/02/38/68/37/240_F_238683726_0RvkNoGLk2OgLiNGggE6QHGLcwgCa8TQ.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Quality Assurance",
+        "description": "Our quality control process in action",
+        "img": "https://t3.ftcdn.net/jpg/03/10/56/86/240_F_310568606_wIioDApZGPpMpqDqcEKzHysUrEqOXK1K.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Global Distribution",
+        "description": "Our worldwide logistics network",
+        "img": "https://t3.ftcdn.net/jpg/03/10/56/86/240_F_310568606_wIioDApZGPpMpqDqcEKzHysUrEqOXK1K.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Technical Expertise",
+        "description": "Our engineering team at work",
+        "img": "https://t4.ftcdn.net/jpg/00/52/18/53/240_F_52185386_7nqno8rIicMlkirfO9aIEQRrGe5Q7Rc5.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Customer Support",
+        "description": "24/7 support for all your needs",
+        "img": "https://t3.ftcdn.net/jpg/02/20/96/50/240_F_220965089_RHuxKpLIaWEa7xDLpakoWLRqJWCOmLS3.jpg"
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "Manufacturing Process",
+        "description": "See how our bearings are made",
+        "src": "https://v.ftcdn.net/15/66/93/00/240_F_1566930046_Z8WXMwY1em5k8XWgUUcXvWwYeypRJ6dd_ST.mp4",
+        "poster": "/video-poster-1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Quality Testing",
+        "description": "Our rigorous testing procedures",
+        "src": "https://v.ftcdn.net/15/27/66/21/240_F_1527662157_Po70SnNylklc83RN1dZgHL7Ri1Orb1Xe_ST.mp4",
+        "poster": "/video-poster-2.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Installation Guide",
+        "description": "Proper bearing installation techniques",
+        "src": "https://v.ftcdn.net/14/33/87/92/240_F_1433879299_rdZ2BVVGcO566EpkXylsSE11D3k0c5Sy_ST.mp4",
+        "poster": "/video-poster-3.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "email": "srobearings@outlook.com",
+    "email2": "info@srobearings.com",
+    "phone": "+91-9873334405",
+    "address": "SRO Bearings Marketing office : 91, Mausam Vihar, Near Preeti Vihar Metro Station, Delhi-110051, INDIA."
+  },
+  "about": {
+    "stats": [
+      { "number": "38 000", "label": "Employees" },
+      { "number": "130", "label": "Countries" },
+      { "number": "71", "label": "Remanufacturing sites" },
+      { "number": "17 000", "label": "Distributors", "prefix": ">" },
+      { "number": "15", "label": "Technology Centres" },
+      { "number": "40", "label": "Customer industries" }
+    ],
+    "principles": [
+      {
+        "title": "Proven Expertise",
+        "description": "Over 25 years of experience solving complex industrial challenges across multiple sectors."
+      },
+      {
+        "title": "Measurable Results",
+        "description": "Our solutions deliver quantifiable improvements in reliability, efficiency, and cost savings."
+      },
+      {
+        "title": "Innovative Approach",
+        "description": "Combining cutting-edge technology with practical engineering solutions."
+      }
+    ]
+  }
+}

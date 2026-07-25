@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set global font */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  /* Keep horizontal spill clipped without creating an overflow container,
+     because overflow hidden/auto/scroll on an ancestor can prevent
+     position: sticky children from sticking correctly. */
+  overflow-x: clip;
+}
+
+body {
+  font-family: "Bahnschrift SemiLight", "Bahnschrift", sans-serif;
+  margin: 0;
+  padding: 0;
+  background:
+    linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+img,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+td,
+th {
+  overflow-wrap: anywhere;
+}
+
+table {
+  max-width: 100%;
+}
+
+@layer utilities {
+  .responsive-container {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-container {
+      width: min(100% - 3rem, 1200px);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-popIn {
+  animation: popIn 0.2s ease-out forwards;
+}
+
+@keyframes chatJump {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  12% {
+    transform: translateY(-16px) scale(1.04);
+  }
+
+  24% {
+    transform: translateY(0) scale(1);
+  }
+
+  34% {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  44% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-chat-jump {
+  animation: chatJump 2.2s ease-in-out infinite;
+}
+
+/* Tiptap Rich Text Editor Content Styling */
+.tiptap-editor-content {
+  line-height: 1.625;
+  color: #374151; /* gray-700 */
+}
+
+.tiptap-editor-content p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.tiptap-editor-content h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.tiptap-editor-content h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.tiptap-editor-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Table styling */
+.tiptap-editor-content table {
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.tiptap-editor-content table th,
+.tiptap-editor-content table td {
+  min-width: 1em;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.tiptap-editor-content table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  text-align: left;
+  color: #111827;
+}
+
+.tiptap-editor-content table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.tiptap-editor-content table td p {
+  margin: 0;
+}
+
+.tiptap-editor-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.tiptap-editor-content blockquote {
+  border-left: 4px solid #00974A; /* green-500 */
+  padding-left: 1rem;
+  font-style: italic;
+  color: #4b5563;
+  margin: 1.5rem 0;
+}
+
+.tiptap-editor-content ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  margin: 1rem 0 !important;
+}
+
+.tiptap-editor-content ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin: 1rem 0 !important;
+}
+
+.tiptap-editor-content li {
+  margin-bottom: 0.25rem;
+}
