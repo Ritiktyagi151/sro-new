@@ -16,7 +16,19 @@ export default function MarketSlider() {
       try {
         const data = await apiGet("/cms/industries");
         const apiMarkets = data.industries?.length ? data.industries : [];
-        setMarkets(apiMarkets.length >= 5 ? apiMarkets : bearingMarkets);
+        const sourceMarkets = apiMarkets.length >= 5 ? apiMarkets : bearingMarkets;
+        const hasMiningCrushers = sourceMarkets.some(
+          (market) => market.name?.toLowerCase() === "mining & crushers"
+        );
+        const normalizedMarkets = hasMiningCrushers
+          ? sourceMarkets
+          : [
+              bearingMarkets[0],
+              ...sourceMarkets.filter(
+                (market) => market.name?.toLowerCase() !== "mining & aggregate"
+              ),
+            ];
+        setMarkets(normalizedMarkets);
       } catch (error) {
         console.error("Failed to fetch markets:", error);
         setMarkets(bearingMarkets);

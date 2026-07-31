@@ -7,10 +7,9 @@ import {
   Mail,
   MapPin,
   Phone,
-  Facebook,
-  Linkedin,
   ArrowRight,
 } from "lucide-react";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -211,20 +210,27 @@ export default function Footer() {
           <div className="flex justify-center space-x-4">
             {[
               {
-                icon: Facebook,
+                icon: FaFacebookF,
                 href: "https://www.facebook.com/profile.php?id=61578079778501",
+                label: "Facebook",
+                className: "bg-[#1877F2] text-white hover:bg-[#166FE5]",
               },
 
               {
-                icon: Linkedin,
+                icon: FaLinkedinIn,
                 href: "https://www.linkedin.com/company/srobharat/?originalSubdomain=io",
+                label: "LinkedIn",
+                className: "bg-[#0A66C2] text-white hover:bg-[#0958A8]",
               },
               // { icon: Instagram, href: "#" },
             ].map((social, index) => (
               <a
                 key={index}
                 href={social.href}
-                className="w-10 h-10 bg-gray-700 hover:bg-gradient-to-r hover:from-gray-400 hover:to-[#00974A] rounded-full flex items-center justify-center text-gray-300 hover:text-gray-600 transition-all duration-300 hover:scale-110"
+                aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 ${social.className}`}
               >
                 <social.icon className="w-5 h-5" />
               </a>

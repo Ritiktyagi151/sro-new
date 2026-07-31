@@ -12,14 +12,14 @@ const panels = [
     mobileImage: "/home-page/customer-support-mobile view.png",
   },
   {
-    title: "Warehousing & Inventory Management",
-    description:
-      "A well-organized warehouse helps us maintain product availability, improve dispatch speed, reduce errors, and support urgent industrial requirements with confidence.",
-    button: "+ Warehouse",
-    href: "/contact",
-    desktopImage: "/home-page/warehousing-desktop.png",
-    mobileImage: "/home-page/warehouse-mobileview.png",
-  },
+  title: "Warehousing & Inventory Management",
+  description:
+    "SRO Bearings maintains a well-stocked warehouse with a wide range of bearings readily available for immediate dispatch. Our efficient inventory management system ensures faster order fulfillment, reduced lead times, and uninterrupted supply to meet urgent industrial requirements.",
+  button: "+ Warehouse",
+  href: "/contact",
+  desktopImage: "/home-page/warehousing-desktop.png",
+  mobileImage: "/home-page/warehouse-mobileview.png",
+},
 ];
 
 export default function ServiceWarehouseSection() {
@@ -42,7 +42,7 @@ export default function ServiceWarehouseSection() {
               />
             </picture>
 
-            <div className="absolute inset-0 bg-black/58 transition duration-300 group-hover:bg-black/68" />
+            <div className="absolute inset-0 bg-black/40 transition duration-300 group-hover:bg-black/68" />
 
             <div className="relative z-10 flex h-full flex-col justify-center px-5 py-8 text-white sm:px-10 lg:px-16">
               <h2 className="max-w-[760px] text-xl font-bold uppercase leading-tight tracking-[0.04em] sm:text-2xl md:text-4xl">

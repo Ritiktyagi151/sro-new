@@ -126,6 +126,7 @@ const seedData = async () => {
         date: new Date(blog.date),
         metaTitle: blog.title,
         metaDescription: blog.excerpt,
+        canonicalUrl: blog.canonicalUrl || "",
         author: {
           name: "Emily Carter",
           role: "Mechanical Analyst",

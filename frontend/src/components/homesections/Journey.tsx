@@ -52,6 +52,7 @@ export default function Journey({ about = {} }) {
     return () => observer.disconnect();
   }, []);
 
+  /*
   const stats =
     about?.stats?.length > 0
       ? about.stats.slice(0, 4)
@@ -61,6 +62,7 @@ export default function Journey({ about = {} }) {
           { number: "24/7", label: "Support Mindset" },
           { number: "100%", label: "Bearing Focus" },
         ];
+  */
 
   return (
     <section
@@ -222,19 +224,21 @@ export default function Journey({ about = {} }) {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-0 border-l border-t border-slate-200 bg-white sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, index) => (
-            <div key={`${stat.label}-${index}`} className="border-b border-r border-slate-200 p-5">
-              <p className="text-3xl font-sans font-bold text-slate-950">
-                {stat.prefix || ""}
-                {stat.number}
-              </p>
-              <p className="mt-2 text-xs font-black uppercase tracking-[0.16em] text-slate-500">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        {/*
+          <div className="mt-10 grid gap-0 border-l border-t border-slate-200 bg-white sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, index) => (
+              <div key={`${stat.label}-${index}`} className="border-b border-r border-slate-200 p-5">
+                <p className="text-3xl font-sans font-bold text-slate-950">
+                  {stat.prefix || ""}
+                  {stat.number}
+                </p>
+                <p className="mt-2 text-xs font-black uppercase tracking-[0.16em] text-slate-500">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        */}
       </div>
     </section>
   );

@@ -2,7 +2,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar4";
 import Footer from "@/components/Footer";
@@ -10,160 +9,116 @@ import Footer from "@/components/Footer";
 const blogPosts = [
   {
     id: 1,
-    slug: "bearing-maintenance-tips",
-    title: "5 Essential Bearing Maintenance Tips",
+    slug: "advanced-bearing-materials",
+    title: "Advanced Materials Improve Bearing Performance",
     content: `
-<h2 class="text-2xl font-bold mb-4">Introduction</h2>
-<p class="mb-6">Proper maintenance extends bearing life and prevents equipment failure.</p>
-
-<h2 class="text-2xl font-bold mb-4">1. Regular Lubrication</h2>
-<p class="mb-4">Use manufacturer-recommended lubricants at specified intervals.</p>
-<ul class="list-disc pl-6 mb-6">
-<li>Reduces friction</li>
-<li>Prevents corrosion</li>
-<li>Extends service life</li>
-</ul>
-
-<h2 class="text-2xl font-bold mb-4">2. Proper Installation</h2>
-<p class="mb-6">Follow correct mounting procedures to avoid premature failure.</p>
+<h2 class="text-2xl font-bold mb-4">Material Innovation</h2>
+<p class="mb-6">Advanced bearing materials and modern heat-treatment technologies are helping industries achieve higher load capacity, longer service life, and improved resistance to wear and corrosion.</p>
+<p class="mb-6">For heavy engineering, manufacturing, and high-speed machinery, better material selection can reduce friction losses, improve fatigue resistance, and protect bearings from harsh operating conditions.</p>
 `,
-    date: "2023-10-15",
-    image: "https://picsum.photos/seed/bearings0/400/250",
-    category: "Maintenance",
-    readTime: "4 min read",
+    date: "2026-07-15",
+    image: "https://t4.ftcdn.net/jpg/05/85/00/55/240_F_585005559_YNUJFQaDLRWN61mGNxWzz9GZypXSrOgz.jpg",
+    category: "Innovation",
+    readTime: "3 min read",
     author: {
-      name: "John Smith",
-      role: "Senior Engineer",
+      name: "SRO Editorial",
+      role: "Industry Desk",
       avatar: "https://picsum.photos/seed/author0/50/50",
     },
   },
   {
     id: 2,
-    slug: "lubrication-best-practices",
-    title: "Lubrication Best Practices for Industrial Bearings",
+    slug: "bearing-reliability",
+    title: "Bearing Reliability Becomes a Key Focus in Heavy Industries",
     content: `
-<h2 class="text-2xl font-bold mb-4">Why Lubrication Matters</h2>
-<p class="mb-6">Correct lubrication prevents wear and overheating in bearings.</p>
-
-<h2 class="text-2xl font-bold mb-4">Types of Lubricants</h2>
-<p class="mb-6">Learn about grease, oil, and solid lubricants for industrial use.</p>
+<h2 class="text-2xl font-bold mb-4">Reliability Focus</h2>
+<p class="mb-6">Manufacturers in mining, steel, cement, and power industries are prioritizing high-quality bearing solutions to minimize equipment downtime, improve operational efficiency, and reduce long-term maintenance costs.</p>
+<p class="mb-6">The focus is shifting toward correct bearing selection, contamination control, alignment, lubrication discipline, and condition monitoring.</p>
 `,
-    date: "2023-11-20",
-    image: "https://picsum.photos/seed/bearings2/400/250",
-    category: "Maintenance",
-    readTime: "5 min read",
+    date: "2026-07-19",
+    image: "https://t4.ftcdn.net/jpg/11/10/99/07/240_F_1110990700_5Fq0VFo1CSzfVgIfnaRARdlvy0TF8k3k.jpg",
+    category: "Industrial",
+    readTime: "3 min read",
     author: {
-      name: "Alice Johnson",
-      role: "Lubrication Specialist",
+      name: "SRO Editorial",
+      role: "Industry Desk",
       avatar: "https://picsum.photos/seed/author2/50/50",
     },
   },
   {
     id: 3,
-    slug: "installation-tips-bearings",
-    title: "Top Installation Tips for Long-Lasting Bearings",
+    slug: "automation-bearing-growth",
+    title: "Automation Drives Growth in Precision Bearing Applications",
     content: `
-<h2 class="text-2xl font-bold mb-4">Proper Handling</h2>
-<p class="mb-6">Handle bearings with care to prevent contamination and damage.</p>
-
-<h2 class="text-2xl font-bold mb-4">Correct Mounting</h2>
-<p class="mb-6">Use appropriate tools and techniques for mounting bearings securely.</p>
+<h2 class="text-2xl font-bold mb-4">Precision Applications</h2>
+<p class="mb-6">The increasing adoption of industrial automation, robotics, and CNC machinery continues to boost the demand for precision bearings that deliver high accuracy, smooth performance, and long operational life.</p>
+<p class="mb-6">Precision bearing applications need consistent geometry, controlled internal clearance, low vibration, and reliable lubrication performance.</p>
 `,
-    date: "2023-12-05",
-    image: "https://picsum.photos/seed/bearings3/400/250",
-    category: "Installation",
-    readTime: "6 min read",
+    date: "2026-07-22",
+    image: "https://t3.ftcdn.net/jpg/11/19/94/78/240_F_1119947888_mab34TBVzoVFc56OH96ELZk4MJE1qhis.jpg",
+    category: "Automation",
+    readTime: "3 min read",
     author: {
-      name: "Robert Green",
-      role: "Field Engineer",
+      name: "SRO Editorial",
+      role: "Industry Desk",
       avatar: "https://picsum.photos/seed/author3/50/50",
     },
   },
   {
     id: 4,
-    slug: "bearing-inspection-guide",
-    title: "A Complete Guide to Bearing Inspection",
+    slug: "energy-efficient-bearings",
+    title: "Energy-Efficient Bearings Support Sustainable Manufacturing",
     content: `
-<h2 class="text-2xl font-bold mb-4">Visual Inspection</h2>
-<p class="mb-6">Check for visible signs of wear, corrosion, or cracks.</p>
-
-<h2 class="text-2xl font-bold mb-4">Functional Testing</h2>
-<p class="mb-6">Test bearings under load to detect early signs of failure.</p>
+<h2 class="text-2xl font-bold mb-4">Sustainable Manufacturing</h2>
+<p class="mb-6">Modern bearing technologies are reducing friction, lowering energy consumption, and improving machine efficiency.</p>
+<p class="mb-6">Industries are increasingly adopting energy-efficient bearing solutions to support sustainable manufacturing goals and reduce total cost of ownership.</p>
 `,
-    date: "2024-01-12",
-    image: "https://picsum.photos/seed/bearings4/400/250",
-    category: "Inspection",
-    readTime: "5 min read",
+    date: "2026-07-25",
+    image: "https://t4.ftcdn.net/jpg/11/86/60/59/240_F_1186605927_xIyNo6Hw4DSSP0myEk7r3oHRc9xyRxl7.jpg",
+    category: "Sustainability",
+    readTime: "3 min read",
     author: {
-      name: "Linda White",
-      role: "Quality Inspector",
+      name: "SRO Editorial",
+      role: "Industry Desk",
       avatar: "https://picsum.photos/seed/author4/50/50",
     },
   },
   {
     id: 5,
-    slug: "bearing-replacement-checklist",
-    title: "Bearing Replacement Checklist You Should Follow",
+    slug: "predictive-maintenance",
+    title: "Predictive Maintenance Reduces Bearing Downtime",
     content: `
-<h2 class="text-2xl font-bold mb-4">Signs You Need a Replacement</h2>
-<p class="mb-6">Noise, vibration, and overheating indicate bearing wear.</p>
-
-<h2 class="text-2xl font-bold mb-4">Replacement Procedure</h2>
-<p class="mb-6">Follow step-by-step guidelines for safe bearing replacement.</p>
+<h2 class="text-2xl font-bold mb-4">Maintenance Technology</h2>
+<p class="mb-6">Predictive maintenance technologies, including vibration monitoring and condition analysis, are enabling industries to identify bearing wear before failures occur.</p>
+<p class="mb-6">This approach helps improve equipment uptime, reduce maintenance expenses, and support planned shutdown decisions.</p>
 `,
-    date: "2024-02-25",
-    image: "https://picsum.photos/seed/bearings5/400/250",
-    category: "Maintenance",
-    readTime: "4 min read",
+    date: "2026-07-28",
+    image: "https://t3.ftcdn.net/jpg/03/14/76/20/240_F_314762012_Ujc3BNLEdzQ6yfYAiCRbHQaPHxZxu2EF.jpg",
+    category: "Technology",
+    readTime: "3 min read",
     author: {
-      name: "George Wilson",
-      role: "Maintenance Engineer",
+      name: "SRO Editorial",
+      role: "Industry Desk",
       avatar: "https://picsum.photos/seed/author5/50/50",
     },
   },
   {
     id: 6,
-    slug: "bearing-performance-optimization",
-    title: "How to Optimize Bearing Performance",
+    slug: "global-bearing-demand",
+    title: "Global Demand for Industrial Bearings Continues to Rise",
     content: `
-<h2 class="text-2xl font-bold mb-4">Routine Checks</h2>
-<p class="mb-6">Implement regular checks to enhance performance and lifespan.</p>
-
-<h2 class="text-2xl font-bold mb-4">Condition Monitoring</h2>
-<p class="mb-6">Use advanced techniques like vibration analysis for predictive maintenance.</p>
+<h2 class="text-2xl font-bold mb-4">Market Demand</h2>
+<p class="mb-6">Growing investments in infrastructure, renewable energy, automotive production, and industrial automation are driving steady demand for high-performance industrial bearings.</p>
+<p class="mb-6">Industry demand continues to favor reliable products, faster availability, and application support that helps customers improve efficiency and machine life.</p>
 `,
-    date: "2024-03-15",
-    image: "https://picsum.photos/seed/bearings6/400/250",
-    category: "Performance",
-    readTime: "5 min read",
+    date: "2026-07-31",
+    image: "https://t3.ftcdn.net/jpg/13/74/03/58/240_F_1374035846_7XnRZfXZnG1BXIq9Wx5nWx20eIvFdLZc.jpg",
+    category: "Industry News",
+    readTime: "4 min read",
     author: {
-      name: "Patricia Brown",
-      role: "Performance Analyst",
+      name: "SRO Editorial",
+      role: "Industry Desk",
       avatar: "https://picsum.photos/seed/author6/50/50",
-    },
-  },
-  {
-    id: 7,
-    slug: "types-of-industrial-bearings",
-    title: "Understanding Different Types of Industrial Bearings",
-    content: `
-<h2 class="text-2xl font-bold mb-4">Introduction</h2>
-<p class="mb-6">Learn the key differences between various industrial bearings and their applications.</p>
-
-<h2 class="text-2xl font-bold mb-4">1. Ball Bearings</h2>
-<p class="mb-6">Ideal for light to moderate loads with low friction.</p>
-
-<h2 class="text-2xl font-bold mb-4">2. Roller Bearings</h2>
-<p class="mb-6">Designed for heavy radial loads in industrial applications.</p>
-`,
-    date: "2024-04-10",
-    image: "https://picsum.photos/seed/bearings7/400/250",
-    category: "Technical Insights",
-    readTime: "5 min read",
-    author: {
-      name: "Emily Carter",
-      role: "Mechanical Analyst",
-      avatar: "https://picsum.photos/seed/author7/50/50",
     },
   },
 ];
@@ -272,11 +227,10 @@ export default function BlogPost({ post, relatedPosts = [] }) {
               </p>
               <div className="flex items-center">
                 <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3">
-                  <Image
+                  <img
                     src={post.author && post.author.avatar && post.author.avatar.startsWith("http") ? post.author.avatar : (post.author && post.author.avatar ? `http://localhost:5001${post.author.avatar}` : "https://picsum.photos/seed/author/80/80")}
                     alt={post.author?.name || "Author"}
-                    fill
-                    className="object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 <div>
@@ -320,11 +274,10 @@ export default function BlogPost({ post, relatedPosts = [] }) {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-8">
             <div className="flex min-w-0 items-center space-x-4">
               <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                <Image
+                <img
                   src={post.author && post.author.avatar && post.author.avatar.startsWith("http") ? post.author.avatar : (post.author && post.author.avatar ? `http://localhost:5001${post.author.avatar}` : "https://picsum.photos/seed/author/80/80")}
                   alt={post.author?.name || "Author"}
-                  fill
-                  className="object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div>
@@ -412,16 +365,15 @@ export default function BlogPost({ post, relatedPosts = [] }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost) => (
                 <div
-                  key={relatedPost._id}
+                  key={relatedPost._id || relatedPost.slug}
                   className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group"
                 >
                   <Link href={`/blogs/${relatedPost.slug}`}>
                     <div className="relative h-48 w-full">
-                      <Image
+                      <img
                         src={relatedPost.image.startsWith("http") ? relatedPost.image : `http://localhost:5001${relatedPost.image}`}
                         alt={relatedPost.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                     <div className="p-5 sm:p-6">
@@ -475,10 +427,24 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const localPost = blogPosts.find((post) => post.slug === params.slug);
+  const localRelatedPosts = blogPosts
+    .filter((post) => post.slug !== params.slug)
+    .slice(0, 3);
+
   try {
     const res = await fetch(`http://localhost:5001/api/blogs/${params.slug}`);
     const data = await res.json();
     if (!data.success) {
+      if (localPost) {
+        return {
+          props: {
+            post: localPost,
+            relatedPosts: localRelatedPosts,
+          },
+          revalidate: 60,
+        };
+      }
       return { notFound: true };
     }
 
@@ -497,6 +463,15 @@ export async function getStaticProps({ params }) {
     };
   } catch (err) {
     console.error("Error in getStaticProps:", err);
+    if (localPost) {
+      return {
+        props: {
+          post: localPost,
+          relatedPosts: localRelatedPosts,
+        },
+        revalidate: 60,
+      };
+    }
     return { notFound: true };
   }
 }

@@ -114,13 +114,13 @@ BLOGS / ARTICLES:
 - Blog detail pages use /blogs/{slug}.
 - Backend blog data is exposed through /api/blogs and /api/blogs/:slug using the Blog model.
 - Seed/backup blog posts found in the project:
-  1. 5 Essential Bearing Maintenance Tips - /blogs/bearing-maintenance-tips
-  2. How to Choose the Right Bearing - /blogs/lubrication-best-practices
-  3. Top Installation Tips for Long-Lasting Bearings - /blogs/installation-tips-bearings
-  4. A Complete Guide to Bearing Inspection - /blogs/bearing-inspection-guide
-  5. Bearing Replacement Checklist You Should Follow - /blogs/bearing-replacement-checklist
-  6. How to Optimize Bearing Performance - /blogs/bearing-performance-optimization
-  7. Understanding Different Types of Industrial Bearings - /blogs/types-of-industrial-bearings
+  1. RBC Bearings hosts Q1 FY2027 earnings webcast today - /blogs/rbc-bearings-q1-fy2027-webcast-july-31
+  2. SKF Q2 2026 shows margin improvement in industrial segments - /blogs/skf-q2-2026-industrial-bearing-margin-improvement
+  3. Timken sets August 4 date for Q2 2026 results - /blogs/timken-q2-2026-results-august-4
+  4. Duursma to join DEXIS industrial distribution network - /blogs/duursma-to-join-dexis-industrial-distribution-network
+  5. Fersa Brasil inaugurates 4,400 m2 facility in Curitiba - /blogs/fersa-brasil-curitiba-bearing-facility
+  6. Silicon nitride ball technology highlighted for high-performance bearings - /blogs/silicon-nitride-ball-technology-high-performance-bearings
+  7. Rodriguez expands RTB bearing range for cobot automation - /blogs/rodriguez-expands-rtb-bearing-range-cobot-automation
 
 ENQUIRY GUIDANCE:
 - For faster assistance, ask users for bearing type, bearing number, size, quantity, machine application, and delivery location.

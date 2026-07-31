@@ -153,14 +153,17 @@ export default function BearingGrid() {
   ];
   const firstRealSlide = visibleItems;
   const lastRealSlide = visibleItems + totalSlides - 1;
-  const normalizeSlideIndex = useCallback((index: number) => {
-    if (!totalSlides) return visibleItems;
+  const normalizeSlideIndex = useCallback(
+    (index: number) => {
+      if (!totalSlides) return visibleItems;
 
-    const normalized =
-      ((index - visibleItems) % totalSlides + totalSlides) % totalSlides;
+      const normalized =
+        (((index - visibleItems) % totalSlides) + totalSlides) % totalSlides;
 
-    return visibleItems + normalized;
-  }, [totalSlides, visibleItems]);
+      return visibleItems + normalized;
+    },
+    [totalSlides, visibleItems]
+  );
   const activeDot =
     totalSlides > 0
       ? (currentIndex - visibleItems + totalSlides) % totalSlides
@@ -219,7 +222,7 @@ export default function BearingGrid() {
 
   return (
     <section
-      className="relative mx-auto h-auto overflow-hidden bg-slate-950 bg-cover bg-center bg-no-repeat px-4 py-6 sm:py-6 lg:h-[85vh] lg:max-h-[85vh] lg:bg-fixed"
+      className="relative mx-auto flex h-auto flex-col overflow-hidden bg-slate-950 bg-cover bg-center bg-no-repeat px-4 py-6 sm:py-6 lg:h-[85vh] lg:max-h-[85vh] lg:justify-center lg:overflow-hidden lg:bg-fixed lg:py-4"
       style={{ backgroundImage: "url('/srobanners/factory.png')" }}
     >
       <div className="absolute inset-0 bg-slate-950/78" />
@@ -227,13 +230,14 @@ export default function BearingGrid() {
       <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/60 to-transparent" />
       <div className="absolute left-0 top-20 hidden h-px w-full bg-gradient-to-r from-transparent via-white/25 to-transparent lg:block" />
 
-      <div className="relative z-10 mx-auto mb-4 flex max-w-7xl  flex-col gap-3 border-b border-white/15 pb-3 md:flex-row md:items-end md:justify-between">
+      {/* Header: shrink-0 so it never eats into the carousel's space */}
+      <div className="relative z-10 mx-auto mb-4 flex w-full max-w-7xl shrink-0 flex-col gap-3 border-b border-white/15 pb-3 md:flex-row md:items-end md:justify-between lg:mb-3 lg:pb-2">
         <div className="max-w-3xl">
           <p className="flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.18em] text-emerald-200 backdrop-blur-sm">
             <Sparkles className="h-3.5 w-3.5 text-[#36d37e]" />
             Product Range
           </p>
-          <h2 className="mt-2 font-sans text-2xl font-black leading-tight text-white sm:text-3xl">
+          <h2 className="mt-2 font-sans text-2xl font-black leading-tight text-white sm:text-3xl lg:text-2xl">
             Precision Bearing Products
           </h2>
           <p className="mt-1 max-w-2xl text-sm leading-5 text-slate-200">
@@ -260,14 +264,15 @@ export default function BearingGrid() {
         </div>
       </div>
 
+      {/* Carousel: flex-1 + min-h-0 makes it fill exactly whatever space is left inside the 85vh section */}
       <div
-        className="relative z-10 mx-auto max-w-7xl"
+        className="relative z-10 mx-auto flex min-h-0 w-full max-w-7xl flex-1 flex-col"
         onMouseEnter={() => setIsAutoPlaying(false)}
         onMouseLeave={() => setIsAutoPlaying(true)}
       >
-        <div className="overflow-hidden rounded-2xl border border-white/15 bg-white/10 p-1.5 shadow-2xl shadow-black/35 backdrop-blur-md">
+        <div className="min-h-0 flex-1 overflow-hidden rounded-2xl border border-white/15 bg-white/10 p-1.5 shadow-2xl shadow-black/35 backdrop-blur-md">
           <div
-            className={`flex will-change-transform ${
+            className={`flex h-full will-change-transform ${
               isTransitioning
                 ? "transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                 : ""
@@ -279,74 +284,76 @@ export default function BearingGrid() {
             }}
           >
             {clonedProducts.map((product, slideIndex) => {
-                    const productIndex = bearingProducts.findIndex(
-                      (item) => item.id === product.id
-                    );
+              const productIndex = bearingProducts.findIndex(
+                (item) => item.id === product.id
+              );
 
-                    return (
-                      <article
-                        key={`${product.id}-${slideIndex}`}
-                        className="group relative flex-shrink-0 px-1.5"
-                        style={{ width: `${100 / visibleItems}%` }}
-                      >
-                        <div className="relative h-full overflow-hidden rounded-xl border border-transparent bg-white shadow-xl shadow-black/10 transition duration-300 group-hover:z-10 group-hover:border-[#36d37e]/60 group-hover:shadow-2xl group-hover:shadow-emerald-950/25">
-                          <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#00974A] via-[#36d37e] to-amber-300 opacity-0 transition duration-500 group-hover:opacity-100" />
+              return (
+                <article
+                  key={`${product.id}-${slideIndex}`}
+                  className="group relative h-full flex-shrink-0 px-1.5"
+                  style={{ width: `${100 / visibleItems}%` }}
+                >
+                  <div className="relative flex h-full flex-col overflow-hidden rounded-xl border border-transparent bg-white shadow-xl shadow-black/10 transition duration-300 group-hover:z-10 group-hover:border-[#36d37e]/60 group-hover:shadow-2xl group-hover:shadow-emerald-950/25">
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#00974A] via-[#36d37e] to-amber-300 opacity-0 transition duration-500 group-hover:opacity-100" />
 
-                          <div className="flex min-h-[380px] flex-col sm:min-h-[400px] lg:h-[calc(80vh-160px)] lg:min-h-[290px]">
-                            <div className="relative flex h-44 items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_35%,#f8fafc_0%,#eef2f7_52%,#dbe3ee_100%)] p-4 sm:h-48 sm:p-5 lg:h-[56%] lg:min-h-[150px]">
-                              <span className="absolute left-4 top-4 rounded-full bg-slate-950 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-white shadow-lg shadow-slate-950/20">
-                                0{productIndex + 1}
-                              </span>
-                              <span className="absolute right-4 top-4 hidden rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#007c3d] sm:block">
-                                SRO
-                              </span>
-                              <img
-                                src={product.image}
-                                alt={product.name}
-                                className="h-full w-full object-contain drop-shadow-2xl transition duration-500 group-hover:scale-110 group-hover:rotate-1"
-                                loading="lazy"
-                              />
-                            </div>
+                    <div className="flex h-full min-h-0 flex-col">
+                      {/* Image area: percentage height now scales with the real available card height */}
+                      <div className="relative flex h-40 shrink-0 items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_35%,#f8fafc_0%,#eef2f7_52%,#dbe3ee_100%)] p-4 sm:h-44 sm:p-5 lg:h-[42%] lg:min-h-0 lg:p-4">
+                        <span className="absolute left-4 top-4 rounded-full bg-slate-950 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-white shadow-lg shadow-slate-950/20">
+                          0{productIndex + 1}
+                        </span>
+                        <span className="absolute right-4 top-4 hidden rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#007c3d] sm:block">
+                          SRO
+                        </span>
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="h-full w-full object-contain drop-shadow-2xl transition duration-500 group-hover:scale-110 group-hover:rotate-1"
+                          loading="lazy"
+                        />
+                      </div>
 
-                            <div className="flex min-h-0 flex-1 flex-col p-4 sm:p-5 lg:p-4">
-                              <h3 className="min-h-[30px] py-0.5 text-[17px] font-sans font-black leading-[1.45] text-slate-950 sm:text-xl">
-                                {product.displayName || product.name}
-                              </h3>
+                      {/* Text area: flex-1 + min-h-0 + line-clamp so text never overflows the card */}
+                      <div className="flex min-h-0 flex-1 flex-col p-4 sm:p-5 lg:p-3.5">
+                        <h3 className="py-0.5 text-[17px] font-sans font-black leading-[1.35] text-slate-950 sm:text-xl lg:text-base">
+                          {product.displayName || product.name}
+                        </h3>
 
-                              <div className="mt-2 flex min-h-[24px] flex-wrap gap-2 overflow-hidden">
-                                {product.features.slice(0, 1).map((feature) => (
-                                  <span
-                                    key={feature}
-                                    className="max-w-full truncate rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-slate-600 transition group-hover:border-emerald-200 group-hover:bg-emerald-50 group-hover:text-[#007c3d]"
-                                  >
-                                    {feature}
-                                  </span>
-                                ))}
-                              </div>
-
-                              <p className="mt-3 truncate rounded-lg border-l-4 border-[#00974A] bg-slate-50 px-3 py-2 text-[10px] font-bold uppercase leading-4 tracking-[0.08em] text-slate-500">
-                                {product.applications}
-                              </p>
-
-                              <a
-                                href={product.link}
-                                className="mt-auto flex items-center justify-between border-t border-slate-200 pt-2.5 text-xs font-black uppercase tracking-[0.1em] text-slate-950 transition group-hover:text-[#00974A]"
-                              >
-                                Explore products
-                                <span className="grid h-8 w-8 place-items-center rounded-full bg-slate-950 text-white shadow-lg shadow-slate-950/20 transition group-hover:bg-[#00974A]">
-                                  <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
-                                </span>
-                              </a>
-                            </div>
-                          </div>
+                        <div className="mt-2 flex min-h-0 flex-wrap gap-2 lg:mt-1.5">
+                          {product.features.slice(0, 1).map((feature) => (
+                            <span
+                              key={feature}
+                              className="line-clamp-1 max-w-full rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-slate-600 transition group-hover:border-emerald-200 group-hover:bg-emerald-50 group-hover:text-[#007c3d]"
+                            >
+                              {feature}
+                            </span>
+                          ))}
                         </div>
-                      </article>
-                    );
-                  })}
+
+                        <p className="mt-3 line-clamp-2 rounded-lg border-l-4 border-[#00974A] bg-slate-50 px-3 py-2 text-[10px] font-bold uppercase leading-4 tracking-[0.08em] text-slate-500 lg:mt-2 lg:py-1.5">
+                          {product.applications}
+                        </p>
+
+                        <a
+                          href={product.link}
+                          className="mt-auto flex shrink-0 items-center justify-between border-t border-slate-200 pt-2.5 text-xs font-black uppercase tracking-[0.1em] text-slate-950 transition group-hover:text-[#00974A] lg:pt-2"
+                        >
+                          Explore products
+                          <span className="grid h-8 w-8 place-items-center rounded-full bg-slate-950 text-white shadow-lg shadow-slate-950/20 transition group-hover:bg-[#00974A]">
+                            <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
 
-        <div className="mt-3 flex justify-center gap-2">
+        <div className="mt-3 flex shrink-0 justify-center gap-2 lg:mt-2">
           {Array.from({ length: totalSlides }, (_, index) => (
             <button
               type="button"

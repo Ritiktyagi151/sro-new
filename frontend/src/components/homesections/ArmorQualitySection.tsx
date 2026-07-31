@@ -33,7 +33,7 @@ export default function ArmorQualitySection() {
               <img
                 src={panel.desktopImage}
                 alt={panel.title}
-                className="absolute inset-0 h-full w-full object-cover transition duration-700"
+                className="absolute inset-0 h-full w-full object-fill transition duration-700"
                 loading="lazy"
               />
             </picture>

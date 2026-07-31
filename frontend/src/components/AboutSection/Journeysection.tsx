@@ -51,27 +51,30 @@ const FrictionSection = ({ about = {} }) => {
         </div>
 
         {/* Stats section below both */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 border-t pt-10  ">
-          {about.stats && about.stats.length > 0 ? (
-            about.stats.map((stat, idx) => (
-              <StatItem key={idx} number={stat.number} label={stat.label} prefix={stat.prefix} />
-            ))
-          ) : (
-            <>
-              <StatItem number="38 000" label="Employees" />
-              <StatItem number="130" label="Countries" />
-              <StatItem number="71" label="Remanufacturing sites" />
-              <StatItem number="17 000" label="Distributors" prefix=">" />
-              <StatItem number="15" label="Technology Centres" />
-              <StatItem number="40" label="Customer industries" />
-            </>
-          )}
-        </div>
+        {/*
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 border-t pt-10  ">
+            {about.stats && about.stats.length > 0 ? (
+              about.stats.map((stat, idx) => (
+                <StatItem key={idx} number={stat.number} label={stat.label} prefix={stat.prefix} />
+              ))
+            ) : (
+              <>
+                <StatItem number="38 000" label="Employees" />
+                <StatItem number="130" label="Countries" />
+                <StatItem number="71" label="Remanufacturing sites" />
+                <StatItem number="17 000" label="Distributors" prefix=">" />
+                <StatItem number="15" label="Technology Centres" />
+                <StatItem number="40" label="Customer industries" />
+              </>
+            )}
+          </div>
+        */}
       </div>
     </section>
   );
 };
 
+/*
 // Stat component with exact styling from image
 const StatItem = ({ number, label, prefix }) => (
   <div className="flex flex-col">
@@ -82,5 +85,6 @@ const StatItem = ({ number, label, prefix }) => (
     <span className="text-gray-500 mt-1">{label}</span>
   </div>
 );
+*/
 
 export default FrictionSection;

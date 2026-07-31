@@ -1,8 +1,8 @@
 // @ts-nocheck
 export const bearingMarkets = [
   {
-    name: "Mining & Aggregate",
-    slug: "mining-aggregate",
+    name: "Mining & Crushers",
+    slug: "mining-crushers",
     image:
       "https://t4.ftcdn.net/jpg/14/41/72/09/240_F_1441720920_mV04OJcA2sFFUKYLNxUJdDdwcznLojrE.jpg",
     description:

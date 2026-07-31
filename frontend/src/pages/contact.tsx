@@ -51,7 +51,6 @@ export default function ContactPage({ contactInfo = {} }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [activeField, setActiveField] = useState(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [info] = useState(contactInfo);
   const primaryPhone = info.phone1 || "+91-9873334405";
   const primaryEmail = info.email || "srobearings@outlook.com";
@@ -59,9 +58,24 @@ export default function ContactPage({ contactInfo = {} }) {
   const phoneHref = primaryPhone.replace(/[^\d+]/g, "");
   const whatsappHref = whatsappNumber.replace(/[^\d]/g, "");
   const socialLinks = [
-    { label: "Facebook", href: info.facebook, icon: FaFacebookF },
-    { label: "LinkedIn", href: info.linkedin, icon: FaLinkedinIn },
-    { label: "YouTube", href: info.youtube, icon: FaYoutube },
+    {
+      label: "Facebook",
+      href: info.facebook,
+      icon: FaFacebookF,
+      className: "bg-[#1877F2] text-white hover:bg-[#166FE5]",
+    },
+    {
+      label: "LinkedIn",
+      href: info.linkedin,
+      icon: FaLinkedinIn,
+      className: "bg-[#0A66C2] text-white hover:bg-[#0958A8]",
+    },
+    {
+      label: "YouTube",
+      href: info.youtube,
+      icon: FaYoutube,
+      className: "bg-[#FF0000] text-white hover:bg-[#CC0000]",
+    },
   ].filter((item) => item.href);
 
   const supportDetails = [
@@ -188,7 +202,6 @@ export default function ContactPage({ contactInfo = {} }) {
       },
     },
   };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -198,33 +211,14 @@ export default function ContactPage({ contactInfo = {} }) {
           content="Contact SRO Bearings for premium bearing solutions and expert support."
         />
       </Head>
-      {/* Top Banner Video with Title */}
-      <div className="relative h-[60vh] min-h-[460px] overflow-hidden md:h-[70vh]">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          onLoadedData={() => setIsVideoLoaded(true)}
-          poster="https://t4.ftcdn.net/jpg/04/86/06/43/240_F_486064333_ueCjCQfwPt6rlXAEcphciGbxp4n6imuh.jpg" // Fallback image
-        >
-          <source
-            src="https://videocdn.cdnpk.net/videos/a50cc503-4e76-522c-b8bf-2ea1ab341869/horizontal/previews/clear/small.mp4?token=exp=1752585333~hmac=7e5fafcfcfe4c164c3ba385fe2dd3da73096c975e93b4f077740d5cdb957e075"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Top Banner */}
+      <div
+        className="relative h-[60vh] min-h-[460px] overflow-hidden bg-[url('/srobanners/sro-bearing-mobile.png')] bg-cover bg-center bg-no-repeat md:h-[70vh] md:bg-[url('/srobanners/sro-contactus.png')]"
+      >
+        <div className="absolute inset-0 bg-black/35"></div>
 
         {/* Banner content */}
-        <div
-          className={`relative h-full flex flex-col justify-center items-center text-center text-white transition-opacity duration-500 ${
-            isVideoLoaded ? "opacity-100" : "opacity-0"
-          }`}
-        >
+        <div className="relative flex h-full flex-col items-center justify-center text-center text-white">
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -470,7 +464,7 @@ export default function ContactPage({ contactInfo = {} }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={social.label}
-                        className="w-10 h-10 rounded-full bg-white/15 hover:bg-white hover:text-[#00974A] transition-colors flex items-center justify-center"
+                        className={`w-10 h-10 rounded-full transition-colors flex items-center justify-center ${social.className}`}
                       >
                         <social.icon />
                       </a>

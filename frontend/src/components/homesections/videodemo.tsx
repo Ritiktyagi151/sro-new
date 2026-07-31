@@ -30,6 +30,30 @@ const slides = [
     background: "/srobanners/roller-chains-banner.png",
     showContent: false, // is slide pe text/buttons hide rahenge
   },
+   {
+    title: "",
+    description: "",
+    background: "/srobanners/multi-row-banner.jpeg",
+    showContent: false, // is slide pe text/buttons hide rahenge
+  },
+  {
+    title: "",
+    description: "",
+    background: "/srobanners/spherical-roller-bearings-banner.jpeg",
+    showContent: false, // is slide pe text/buttons hide rahenge
+  },
+  {
+    title: "",
+    description: "",
+    background: "/srobanners/taper-roller-banner.jpeg",
+    showContent: false, // is slide pe text/buttons hide rahenge
+  },
+  {
+    title: "",
+    description: "",
+    background: "/srobanners/thrust-banner-banner.jpeg",
+    showContent: false, // is slide pe text/buttons hide rahenge
+  },
 ];
 
 const Videodemo = () => {

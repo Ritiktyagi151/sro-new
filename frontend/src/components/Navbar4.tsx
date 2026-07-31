@@ -238,12 +238,28 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-4">
-            <FaFacebookF />
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578079778501"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="grid h-7 w-7 place-items-center rounded-full bg-[#1877F2] text-white transition hover:bg-[#166FE5]"
+            >
+              <FaFacebookF className="h-3.5 w-3.5" />
+            </a>
             {/* <FaGooglePlusG /> */}
             {/* <FaTwitter /> */}
             {/* <FaInstagram /> */}
-            <FaLinkedinIn />
+            <a
+              href="https://www.linkedin.com/company/srobharat/?originalSubdomain=io"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="grid h-7 w-7 place-items-center rounded-full bg-[#0A66C2] text-white transition hover:bg-[#0958A8]"
+            >
+              <FaLinkedinIn className="h-3.5 w-3.5" />
+            </a>
             {/* <FaYoutube /> */}
           </div>
         </div>

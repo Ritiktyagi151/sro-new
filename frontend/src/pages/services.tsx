@@ -326,17 +326,10 @@ export default function ServicesPage({ initialServices = [] }) {
       )}
 
       {/* Hero Section */}
-      <div className="relative bg-gray-900 text-white h-[70vh] sm:h-[70vh] md:h-[70vh]">
-        <div className="absolute inset-0">
-          <Image
-            src="https://picsum.photos/1600/900?random=7"
-            alt="Industrial facility with machinery"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-50"
-            priority
-          />
-        </div>
+      <div
+        className="relative h-[70vh] bg-gray-900 bg-[url('/srobanners/sro-services.png')] bg-cover bg-center bg-no-repeat text-white"
+      >
+        <div className="absolute inset-0 bg-black/45"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
             Industrial Reliability Solutions

@@ -2,93 +2,90 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 
 const blogPosts = [
   {
     id: 1,
-    slug: "bearing-maintenance-tips",
-    title: "5 Essential Bearing Maintenance Tips",
+    slug: "advanced-bearing-materials",
+    title: "Advanced Materials Improve Bearing Performance",
     excerpt:
-      "Learn how to properly maintain your bearings to extend their lifespan.",
-    date: "2023-10-15",
+      "Advanced bearing materials and modern heat-treatment technologies are helping industries achieve higher load capacity, longer service life, and improved resistance to wear and corrosion.",
+    date: "2026-07-15",
     image:
-      "https://images.unsplash.com/photo-1503507739298-dce173d09653?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmVhcmluZyUyMG1haW50ZW5hbmNlJTIwdGlwc3xlbnwwfHwwfHx8MA%3D%3D",
-    category: "Maintenance",
-    readTime: "4 min read",
+      "https://t4.ftcdn.net/jpg/05/85/00/55/240_F_585005559_YNUJFQaDLRWN61mGNxWzz9GZypXSrOgz.jpg",
+    category: "Innovation",
+    readTime: "3 min read",
   },
   {
     id: 2,
-    slug: "lubrication-best-practices",
-    title: "How to Choose the Right Bearing",
+    slug: "bearing-reliability",
+    title: "Bearing Reliability Becomes a Key Focus in Heavy Industries",
     excerpt:
-      "Guide to selecting bearings based on load and speed requirements.",
-    date: "2023-09-28",
+      "Manufacturers in mining, steel, cement, and power industries are prioritizing high-quality bearing solutions to minimize equipment downtime.",
+    date: "2026-07-19",
     image:
-      "https://images.unsplash.com/photo-1709294324061-fc40251bb002?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHVicmljYXRpb24lMjBiZXN0JTIwcHJhY3RpY2VzfGVufDB8fDB8fHww",
-    category: "Guide",
-    readTime: "6 min read",
+      "https://t4.ftcdn.net/jpg/11/10/99/07/240_F_1110990700_5Fq0VFo1CSzfVgIfnaRARdlvy0TF8k3k.jpg",
+    category: "Industrial",
+    readTime: "3 min read",
   },
   {
     id: 3,
-    slug: "installation-tips-bearings",
-    title: "Top Installation Tips for Long-Lasting Bearings",
+    slug: "automation-bearing-growth",
+    title: "Automation Drives Growth in Precision Bearing Applications",
     excerpt:
-      "Discover the best practices for installing bearings to maximize their performance.",
-    date: "2023-12-05",
+      "Industrial automation, robotics, and CNC machinery continue to boost demand for precision bearings.",
+    date: "2026-07-22",
     image:
-      "https://images.unsplash.com/photo-1656597631995-9fa0e1072279?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGluc3RhbGxhdGlvbiUyMHRpcHMlMjBiZWFyaW5nc3xlbnwwfHwwfHx8MA%3D%3D",
-    category: "Installation",
-    readTime: "5 min read",
+      "https://t3.ftcdn.net/jpg/11/19/94/78/240_F_1119947888_mab34TBVzoVFc56OH96ELZk4MJE1qhis.jpg",
+    category: "Automation",
+    readTime: "3 min read",
   },
   {
     id: 4,
-    slug: "bearing-inspection-guide",
-    title: "A Complete Guide to Bearing Inspection",
+    slug: "energy-efficient-bearings",
+    title: "Energy-Efficient Bearings Support Sustainable Manufacturing",
     excerpt:
-      "Step-by-step guide for inspecting bearings for wear, damage, and performance.",
-    date: "2024-01-12",
+      "Modern bearing technologies are reducing friction, lowering energy consumption, and improving machine efficiency.",
+    date: "2026-07-25",
     image:
-      "https://images.unsplash.com/photo-1615746363486-92cd8c5e0a90?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVhcmluZyUyMGluc3BlY3Rpb24lMjBndWlkZXxlbnwwfHwwfHx8MA%3D%3D",
-    category: "Inspection",
-    readTime: "4 min read",
+      "https://t4.ftcdn.net/jpg/11/86/60/59/240_F_1186605927_xIyNo6Hw4DSSP0myEk7r3oHRc9xyRxl7.jpg",
+    category: "Sustainability",
+    readTime: "3 min read",
   },
   {
     id: 5,
-    slug: "bearing-replacement-checklist",
-    title: "Bearing Replacement Checklist You Should Follow",
+    slug: "predictive-maintenance",
+    title: "Predictive Maintenance Reduces Bearing Downtime",
     excerpt:
-      "Key signs and checklist to help you know when it's time to replace a bearing.",
-    date: "2024-02-25",
+      "Predictive maintenance technologies are enabling industries to identify bearing wear before failures occur.",
+    date: "2026-07-28",
     image:
-      "https://images.unsplash.com/photo-1567093322503-341d262ad8f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJlYXJpbmclMjByZXBsYWNlbWVudCUyMGNoZWNrbGlzdHxlbnwwfHwwfHx8MA%3D%3D",
-    category: "Maintenance",
-    readTime: "4 min read",
+      "https://t3.ftcdn.net/jpg/03/14/76/20/240_F_314762012_Ujc3BNLEdzQ6yfYAiCRbHQaPHxZxu2EF.jpg",
+    category: "Technology",
+    readTime: "3 min read",
   },
   {
     id: 6,
-    slug: "bearing-performance-optimization",
-    title: "How to Optimize Bearing Performance",
+    slug: "global-bearing-demand",
+    title: "Global Demand for Industrial Bearings Continues to Rise",
     excerpt:
-      "Tips and techniques to enhance bearing efficiency and extend operational life.",
-    date: "2024-03-15",
+      "Infrastructure, renewable energy, automotive production, and industrial automation are driving demand for high-performance industrial bearings.",
+    date: "2026-07-31",
     image:
-      "https://images.unsplash.com/photo-1715079005638-c37bfd236c1c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJlYXJpbmclMjBwZXJmb3JtYW5jZSUyMG9wdGltaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
-    category: "Performance",
-    readTime: "5 min read",
+      "https://t3.ftcdn.net/jpg/13/74/03/58/240_F_1374035846_7XnRZfXZnG1BXIq9Wx5nWx20eIvFdLZc.jpg",
+    category: "Industry News",
+    readTime: "4 min read",
   },
-  {
-    id: 7,
-    slug: "types-of-industrial-bearings",
-    title: "Understanding Different Types of Industrial Bearings",
-    excerpt:
-      "Overview of various industrial bearing types and their key applications.",
-    date: "2024-04-10",
-    image:
-      "https://images.unsplash.com/photo-1658248165127-f880b5a74e98?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dHlwZXMlMjBvZiUyMGluZHVzdHJpYWwlMjBiZWFyaW5ncyUyMnxlbnwwfHwwfHx8MA%3D%3D",
-    category: "Technical Insights",
-    readTime: "5 min read",
-  },
+];
+
+const replacedSeedSlugs = [
+  "bearing-maintenance-tips",
+  "lubrication-best-practices",
+  "installation-tips-bearings",
+  "bearing-inspection-guide",
+  "bearing-replacement-checklist",
+  "bearing-performance-optimization",
+  "types-of-industrial-bearings",
 ];
 
 export async function getStaticProps() {
@@ -105,7 +102,7 @@ export async function getStaticProps() {
     console.error("Error fetching blogs:", err);
     return {
       props: {
-        initialBlogs: [],
+        initialBlogs: blogPosts,
       },
       revalidate: 60,
     };
@@ -114,7 +111,13 @@ export async function getStaticProps() {
 
 export default function BlogPage({ initialBlogs = [] }) {
   const [mounted, setMounted] = useState(false);
-  const [blogs] = useState(initialBlogs);
+  const [blogs] = useState(() => {
+    const latestSlugs = new Set(blogPosts.map((post) => post.slug));
+    const remainingBlogs = initialBlogs.filter(
+      (post) => !latestSlugs.has(post.slug) && !replacedSeedSlugs.includes(post.slug)
+    );
+    return [...blogPosts, ...remainingBlogs];
+  });
 
   useEffect(() => {
     setMounted(true);
@@ -131,21 +134,11 @@ export default function BlogPage({ initialBlogs = [] }) {
         <meta name="description" content="Latest articles from SRO Bearings" />
       </Head>
 
-      {/* Video Banner */}
-      <div className="relative h-[60vh] min-h-[420px] md:h-[70vh] w-full overflow-hidden bg-black">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-80"
-          poster="https://media.istockphoto.com/id/687071416/photo/gears-on-dark.jpg?s=612x612&w=0&k=20&c=eYmN-qOeKAxHxASEbut7V5pFzVycrp_sT3MPAc4TK3s="
-        >
-          <source
-            src="https://videocdn.cdnpk.net/videos/f7fb57fd-c837-57ed-8a7e-06e902a30f08/horizontal/previews/clear/small.mp4?token=exp=1752735106~hmac=6dee04e92efc9fee1854ccd73e30c95c23490827031aed2bb4f574b486aef8de"
-            type="video/mp4"
-          />
-        </video>
+      {/* Blog Banner */}
+      <div
+        className="relative h-[60vh] min-h-[420px] w-full overflow-hidden bg-black bg-[url('/srobanners/sro-bearing-mobile.png')] bg-cover bg-center bg-no-repeat md:h-[70vh] md:bg-[url('/srobanners/blog-banner.png')]"
+      >
+        <div className="absolute inset-0 bg-black/35"></div>
         <div className="absolute inset-0 flex items-center justify-center text-center px-4">
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4">
@@ -162,20 +155,18 @@ export default function BlogPage({ initialBlogs = [] }) {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((post) => (
             <article
-              key={post._id}
+              key={post._id || post.slug}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <div className="relative h-48 w-full">
-                <Image
+                <img
                   src={
                     post.image.startsWith("http")
                       ? post.image
                       : `http://localhost:5001${post.image}`
                   }
                   alt={post.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="p-5 sm:p-6">
