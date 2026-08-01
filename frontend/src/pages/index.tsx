@@ -15,7 +15,6 @@ import QuoteFaqSection from "@/components/homesections/QuoteFaqSection";
 import TestimonialsSection from "@/components/homesections/TestimonialsSection";
 
 import Head from "next/head";
-import Videodemo from "@/components/homesections/videodemo";
 import Journey from "@/components/homesections/Journey";
 import { motion } from "framer-motion";
 
@@ -57,8 +56,7 @@ export default function Home({ about = {} }) {
       <Head>
         <title>Home | SRO bearing</title>
       </Head>
-      <Videodemo />
-      {/* <HeroVideoSection /> */}
+      <HeroVideoSection />
       <ScrollReveal>
         <Homeabout />
       </ScrollReveal>
